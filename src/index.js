@@ -15,7 +15,7 @@ const {
   removeUser,
 } = require('./utils/users');
 
-app.use(cors());
+app.use(cors({ origin: 'https://group-chatting.netlify.app' }));
 app.use(express.json());
 
 io.origins(['https://group-chatting.netlify.app']);
