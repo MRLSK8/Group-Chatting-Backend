@@ -35,13 +35,13 @@ io.on('connection', (socket) => {
     }
   }
 
-  socket.on('check', ({ name, room }, callback) => {
+  socket.on('checkIfUserExist', ({ name, room }, callback) => {
     const error = checkIfUserExist({ name, room });
 
     callback(error);
   });
 
-  socket.on('join', ({ name, room, gender }, callback) => {
+  socket.on('joinRoom', ({ name, room, gender }, callback) => {
     const { user } = addUser({ id: socket.id, name, room, gender });
 
     socket.emit('message', {
