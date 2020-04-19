@@ -18,7 +18,8 @@ const {
 app.use(cors());
 app.use(express.json());
 
-io.origins(['http://localhost:3000', 'https://group-chatting.netlify.app/']);
+io.origins(['http://localhost:3000', 'https://group-chatting.netlify.app']);
+
 io.on('connection', (socket) => {
   function disconnectUser() {
     const user = removeUser(socket.id);
