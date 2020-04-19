@@ -18,7 +18,7 @@ const {
 app.use(cors());
 app.use(express.json());
 
-io.origins(['https://group-chatting-k8.herokuapp.com']);
+io.origins(['https://group-chatting.netlify.app']);
 
 io.on('connection', (socket) => {
   function disconnectUser() {
