@@ -18,8 +18,6 @@ const {
 app.use(cors());
 app.use(express.json());
 
-io.origins('https://group-chatting.netlify.app'); 
-
 io.on('connection', (socket) => {
   function disconnectUser() {
     const user = removeUser(socket.id);
